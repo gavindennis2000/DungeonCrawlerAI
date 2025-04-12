@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
 import './App.css'
-import Particle from "./Components/Particle.jsx";
 
+function App() {
+  const [count, setCount] = useState(0)
 
-export default function App() {
   return (
     <>
-        <Particle/>
+      <center>Dungeon Crawler API</center>
     </>
   )
 }
+
+export default App
