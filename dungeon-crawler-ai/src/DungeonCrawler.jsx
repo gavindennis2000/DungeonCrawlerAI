@@ -7,7 +7,9 @@ import StoryText from './StoryText';
 import ImageDisplay from './ImageDisplay';
 
 const DungeonCrawler = () => {
-  const [imageUrl, setImageUrl] = useState('https://source.unsplash.com/random/600x350?dungeon');
+  const [imageUrl, setImageUrl] = useState(
+    'https://source.unsplash.com/random/600x350?dungeon'
+  );
   const [storyText, setStoryText] = useState(
     "Unable to grab story from Gemini. :("
   );
@@ -17,8 +19,8 @@ const DungeonCrawler = () => {
   return (
     <Container sx={{ minHeight: '100vh', padding: 3, color: 'white' }}>
       <ImageDisplay imageUrl={imageUrl} />
-      <UserText setStoryText={setStoryText}/>
       <StoryText storyText={storyText} />
+      <UserText setStoryText={setStoryText} setImageUrl={setImageUrl}/>
     </Container>
   );
 };

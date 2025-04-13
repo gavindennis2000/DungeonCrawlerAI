@@ -15,7 +15,7 @@ const App = () => {
             <Particle />
 
             {/* Foreground content */}
-            <div className="position-relative d-flex flex-column min-vh-100 text-white" style={{ zIndex: 2 }}>
+            <div className="position-relative d-flex flex-column justify-content-center min-vh-100 text-white" style={{ zIndex: 2 }}>
 
                 {/* Game content */}
                 <div className="flex-grow-1 d-flex flex-column">
