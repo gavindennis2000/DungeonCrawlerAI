@@ -25,7 +25,7 @@ async function handleGeminiRequest(req, res) {
             return res.status(400).json({ error: 'Missing or invalid "prompt" in request body' });
         }
 
-        const model = genAI.getGenerativeModel({ model: 'models/gemini-1.5-flash' });
+        const model = genAI.getGenerativeModel({ model: 'models/gemini-2.0-pro-exp-02-05' });
 
         const result = await model.generateContent(prompt);
         const response = await result.response;
