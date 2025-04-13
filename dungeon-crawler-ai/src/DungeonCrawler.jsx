@@ -5,24 +5,20 @@ import { Container } from '@mui/material';
 import UserText from './UserText';
 import StoryText from './StoryText';
 import ImageDisplay from './ImageDisplay';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from './theme';
 
 const DungeonCrawler = () => {
   const [imageUrl, setImageUrl] = useState('https://source.unsplash.com/random/600x350?dungeon');
-  const [altText, setAltText] = useState('A mysterious dungeon entrance');
   const [storyText, setStoryText] = useState(
-    "Unable to grab story from Gemini."
+    "Unable to grab story from Gemini. :("
   );
 
   // TODO: replace setStoryText with Gemini API response
 
   return (
     <Container sx={{ minHeight: '100vh', padding: 3, color: 'white' }}>
+      <ImageDisplay imageUrl={imageUrl} />
+      <UserText setStoryText={setStoryText}/>
       <StoryText storyText={storyText} />
-      <ImageDisplay imageUrl={imageUrl} altText={altText} />
-      <UserText />
     </Container>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField, Button } from '@mui/material';
 import axios from 'axios';
 
-const UserText = () => {
+const UserText = ({setStoryText}) => {
   // textbox and submit. handles collecting user input and api call
   // communicate with gemini
 
@@ -14,10 +14,16 @@ const UserText = () => {
 
   const handleSubmit = async () => {
     if (message.trim()) {
+      const messageObj = {
+        prompt: message
+      }
       try {
-        console.log(message);
-        const response = await axios.post('YOUR_API_URL', { message });
+        console.log(messageObj);
+        const response = await axios.post('http://localhost:3001/api/gemini/generate', messageObj);
         console.log('Response:', response.data); // Handle response data here
+        // const data = await response.json();
+        console.log("hold up:", response.data);
+        setStoryText(response.data.text); // Update the shared state
       } catch (error) {
         console.error('Error during API call:', error);
       }

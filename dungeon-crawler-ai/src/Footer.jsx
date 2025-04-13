@@ -18,7 +18,7 @@ const Footer = () => {
         <Typography
           variant="body2"
           sx={{
-            fontFamily: 'Cinzel, serif',
+            fontFamily: 'MedievalSharp, serif',
             color: '#f5e8c7',
             letterSpacing: '1px',
             textShadow: '1px 1px #000',
