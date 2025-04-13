@@ -7,11 +7,6 @@ function App() {
 
   return (
     <>
-      <img
-        src={"logo.png"}
-        alt="My Logo"
-        style={{ display: 'block', margin: '0 auto' }}
-      />
     </>
   )
 }
