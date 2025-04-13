@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import '../public/logo.png'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <center>Dungeon Crawler API</center>
+      <img
+        src={"logo.png"}
+        alt="My Logo"
+        style={{ display: 'block', margin: '0 auto' }}
+      />
     </>
   )
 }
