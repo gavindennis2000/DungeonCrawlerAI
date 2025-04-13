@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField, Button, Typography } from '@mui/material';
 import axios from 'axios';
 
-const UserText = ({ setStoryText, setStatus, status }) => {
+const UserText = ({ setStoryText, setStatus, setImageUrl, status }) => {
     const [message, setMessage] = useState('');
 
     const handleMessageChange = (event) => {
@@ -29,6 +29,9 @@ const UserText = ({ setStoryText, setStatus, status }) => {
                 // You could also call setStatus here if you're lifting state up (see below)
                 setStatus(response.data.status);
 
+                // set the new image
+                setImageUrl('https://preview.redd.it/which-of-the-3-images-do-you-prefer-its-for-a-book-about-v0-2aje0otzj3wb1.jpg?width=5000&format=pjpg&auto=webp&s=3704ebb380800f77f937da20e8f75bc5583cce0f');
+
 
             } catch (error) {
                 console.error('Error during API call:', error);
@@ -38,6 +41,17 @@ const UserText = ({ setStoryText, setStatus, status }) => {
 
     return (
         <div>
+            <br />
+            <Typography
+              variant="h6"
+              sx={{
+                fontFamily: 'MedievalSharp, cursive',
+                color: '#fff', // Optional: set text color
+                marginBottom: '0.5rem',
+              }}
+            >
+              Your Response:
+            </Typography>
             <TextField
                 variant="outlined"
                 fullWidth

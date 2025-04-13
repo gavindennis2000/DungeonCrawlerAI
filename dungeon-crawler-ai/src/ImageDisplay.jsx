@@ -7,7 +7,8 @@ const ImageDisplay = ({ imageUrl }) => {
     <Card sx={{ maxWidth: 800, maxHeight: 225, marginTop: 3, backgroundColor: '#222' }}>
       <CardMedia
         component="img"
-        height="350"
+        // height="auto"
+        // width="auto"
         image={imageUrl}
         alt={"unable to load image"}
       />
