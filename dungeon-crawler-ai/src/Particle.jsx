@@ -24,7 +24,7 @@ function Particle() {
                 },
                 "particles": {
                     "number": {
-                        "value": 50,
+                        "value": 160,
                         "density": {
                             "enable": false,
                             "value_area": 1000
@@ -43,8 +43,12 @@ function Particle() {
                         "value": 0.8,
                         "random": false,
                         "anim": {
-                            "enable": false,
-                            "speed": 0.8,
+                            "enable": true,
+                            "speed": 1,
+                            "decay": 0,
+                            "delay": 0,
+                            "startValue": "random",
+                            "destroy": "none",
                             "opacity_min": 0.1,
                             "sync": false
                         }
@@ -71,7 +75,7 @@ function Particle() {
                     },
                     "move": {
                         "enable": true,
-                        "speed": 2,
+                        "speed": 0.5,
                         "direction": "none",
                         "random": false,
                         "straight": false,
@@ -80,37 +84,6 @@ function Particle() {
                             "enable": false,
                             "rotateX": 600,
                             "rotateY": 1200
-                        }
-                    }
-                },
-                "interactivity": {
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": ["grab"]
-                        },
-                        "onclick": {
-                            "enable": false,
-                            "mode": "bubble"
-                        },
-                        "resize": true
-                    },
-                    "modes": {
-                        "bubble": {
-                            "distance": 400,
-                            "size": 40,
-                            "duration": 2,
-                            "opacity": 8,
-                            "speed": 3
-                        },
-                        "repulse": {
-                            "distance": 200
-                        },
-                        "push": {
-                            "particles_nb": 4
-                        },
-                        "remove": {
-                            "particles_nb": 2
                         }
                     }
                 },
