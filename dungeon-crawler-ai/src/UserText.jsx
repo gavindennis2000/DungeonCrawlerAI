@@ -33,6 +33,7 @@ const UserText = () => {
         value={message}
         onChange={handleMessageChange}
         sx={{
+            marginTop: 10,
           backgroundColor: '#333', // Dark background color for the TextField
           color: 'white',           // White text color
           '& .MuiOutlinedInput-root': {

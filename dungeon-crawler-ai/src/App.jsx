@@ -1,19 +1,32 @@
-import { useState } from 'react'
-import './App.css'
-import '../public/logo.png'
+import React, { useState } from 'react';
+import DungeonCrawler from './DungeonCrawler';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Particle from './Particle.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    return (
+        <div className="position-relative">
+            {/* Particle background */}
+            <Particle />
 
-  return (
-    <>
-      <img
-        src={"logo.png"}
-        alt="My Logo"
-        style={{ display: 'block', margin: '0 auto' }}
-      />
-    </>
-  )
-}
+            {/* Foreground content */}
+            <div className="position-relative d-flex flex-column min-vh-100 text-white" style={{ zIndex: 2 }}>
+                {/* Logo at top */}
+                <div className="text-center py-3">
+                    <img
+                        src="logo.png"
+                        alt="My Logo"
+                        style={{ maxHeight: '100px', objectFit: 'contain' }}
+                    />
+                </div>
 
-export default App
+                {/* Game content */}
+                <div className="flex-grow-1 d-flex flex-column">
+                    <DungeonCrawler />
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default App;

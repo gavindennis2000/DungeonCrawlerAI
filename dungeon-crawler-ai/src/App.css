@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 1600px;        /* Make it wider */
+  margin: 0 auto;           /* Center it horizontally */
+  padding: 2rem 40px;       /* Add left/right padding */
   text-align: center;
+  background-color: #000;   /* Ensure the black background is on this container */
 }
 
 .logo {
