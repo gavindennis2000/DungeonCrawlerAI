@@ -8,9 +8,11 @@ import DungeonCrawler from './DungeonCrawler.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header />
+    <center>
+    {/* <Header /> */}
     <App />
-    <DungeonCrawler />
-    <Footer />
+    {/* <DungeonCrawler /> */}
+    {/* <Footer /> */}
+    </center>
   </StrictMode>,
 )

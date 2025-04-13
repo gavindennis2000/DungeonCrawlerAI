@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 
 const Header = () => {
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#2e1a47' }}>
+    <div>
         <img
         src={"logo.png"}
         alt="Dungeon Crawler AI"
@@ -24,7 +24,7 @@ const Header = () => {
             Online AI-Assisted Tabletop RPG
         </Typography>
       </Toolbar>
-    </AppBar>
+    </div>
   );
 };
 
